@@ -1,0 +1,36 @@
+<indexdiv>
+<indexdiv><title>G</title>
+<indexentry><primaryie linkends="GtkOSXApplication-struct"><link linkend="GtkOSXApplication">GtkOSXApplication</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GtkOSXApplication-NSApplicationBlockTermination"><link linkend="GtkOSXApplication-NSApplicationBlockTermination">GtkOSXApplication::NSApplicationBlockTermination</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GtkOSXApplication-NSApplicationDidBecomeActive"><link linkend="GtkOSXApplication-NSApplicationDidBecomeActive">GtkOSXApplication::NSApplicationDidBecomeActive</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GtkOSXApplication-NSApplicationOpenFile"><link linkend="GtkOSXApplication-NSApplicationOpenFile">GtkOSXApplication::NSApplicationOpenFile</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GtkOSXApplication-NSApplicationWillResignActive"><link linkend="GtkOSXApplication-NSApplicationWillResignActive">GtkOSXApplication::NSApplicationWillResignActive</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GtkOSXApplication-NSApplicationWillTerminate"><link linkend="GtkOSXApplication-NSApplicationWillTerminate">GtkOSXApplication::NSApplicationWillTerminate</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GtkOSXApplicationAttentionType"><link linkend="GtkOSXApplicationAttentionType">GtkOSXApplicationAttentionType</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GtkOSXApplicationMenuGroup"><link linkend="GtkOSXApplicationMenuGroup">GtkOSXApplicationMenuGroup</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GtkOSXApplicationPrivate"><link linkend="GtkOSXApplicationPrivate">GtkOSXApplicationPrivate</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-osxapplication-attention-request"><link linkend="gtk-osxapplication-attention-request">gtk_osxapplication_attention_request</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-osxapplication-cancel-attention-request"><link linkend="gtk-osxapplication-cancel-attention-request">gtk_osxapplication_cancel_attention_request</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-osxapplication-cleanup"><link linkend="gtk-osxapplication-cleanup">gtk_osxapplication_cleanup</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-osxapplication-insert-app-menu-item"><link linkend="gtk-osxapplication-insert-app-menu-item">gtk_osxapplication_insert_app_menu_item</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-osxapplication-ready"><link linkend="gtk-osxapplication-ready">gtk_osxapplication_ready</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-osxapplication-set-dock-icon-pixbuf"><link linkend="gtk-osxapplication-set-dock-icon-pixbuf">gtk_osxapplication_set_dock_icon_pixbuf</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-osxapplication-set-dock-icon-resource"><link linkend="gtk-osxapplication-set-dock-icon-resource">gtk_osxapplication_set_dock_icon_resource</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-osxapplication-set-dock-menu"><link linkend="gtk-osxapplication-set-dock-menu">gtk_osxapplication_set_dock_menu</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-osxapplication-set-help-menu"><link linkend="gtk-osxapplication-set-help-menu">gtk_osxapplication_set_help_menu</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-osxapplication-set-menu-bar"><link linkend="gtk-osxapplication-set-menu-bar">gtk_osxapplication_set_menu_bar</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-osxapplication-set-use-quartz-accelerators"><link linkend="gtk-osxapplication-set-use-quartz-accelerators">gtk_osxapplication_set_use_quartz_accelerators</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-osxapplication-set-window-menu"><link linkend="gtk-osxapplication-set-window-menu">gtk_osxapplication_set_window_menu</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-osxapplication-sync-menubar"><link linkend="gtk-osxapplication-sync-menubar">gtk_osxapplication_sync_menubar</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-osxapplication-use-quartz-accelerators"><link linkend="gtk-osxapplication-use-quartz-accelerators">gtk_osxapplication_use_quartz_accelerators</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gtk-type-osxapplication-attention-type-get-type"><link linkend="gtk-type-osxapplication-attention-type-get-type">gtk_type_osxapplication_attention_type_get_type</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GTK-TYPE-OSX-APPLICATION-ATTENTION-TYPE--CAPS"><link linkend="GTK-TYPE-OSX-APPLICATION-ATTENTION-TYPE--CAPS">GTK_TYPE_OSX_APPLICATION_ATTENTION_TYPE</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>Q</title>
+<indexentry><primaryie linkends="quartz-application-get-bundle-id"><link linkend="quartz-application-get-bundle-id">quartz_application_get_bundle_id</link></primaryie></indexentry>
+<indexentry><primaryie linkends="quartz-application-get-bundle-info"><link linkend="quartz-application-get-bundle-info">quartz_application_get_bundle_info</link></primaryie></indexentry>
+<indexentry><primaryie linkends="quartz-application-get-bundle-path"><link linkend="quartz-application-get-bundle-path">quartz_application_get_bundle_path</link></primaryie></indexentry>
+<indexentry><primaryie linkends="quartz-application-get-executable-path"><link linkend="quartz-application-get-executable-path">quartz_application_get_executable_path</link></primaryie></indexentry>
+<indexentry><primaryie linkends="quartz-application-get-resource-path"><link linkend="quartz-application-get-resource-path">quartz_application_get_resource_path</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

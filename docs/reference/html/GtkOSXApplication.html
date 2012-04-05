@@ -1,0 +1,1249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GtkOSXApplication</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.71.0">
+<link rel="start" href="index.html" title="Gtk-OSX Integration Reference Manual">
+<link rel="up" href="ch01.html" title="GtkOSXApplication Reference">
+<link rel="prev" href="ch01.html" title="GtkOSXApplication Reference">
+<link rel="next" href="object-tree.html" title="Object Hierarchy">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="ch01.html" title="GtkOSXApplication Reference">
+<link rel="chapter" href="object-tree.html" title="Object Hierarchy">
+<link rel="index" href="api-index-full.html" title="API Index">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch01.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Gtk-OSX Integration Reference Manual</th>
+<td><a accesskey="n" href="object-tree.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GtkOSXApplication.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#GtkOSXApplication.description" class="shortcut">Description</a>
+                 | 
+                <a href="#GtkOSXApplication.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                 | 
+                <a href="#GtkOSXApplication.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="GtkOSXApplication"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GtkOSXApplication.top_of_page"></a>GtkOSXApplication</span></h2>
+<p>GtkOSXApplication — Base class for OSX integration</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GtkOSXApplication.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;gtkosxapplication.h&gt;
+
+                    <a
+href="gtk-mac-integration/GtkOSXApplication.html#GtkOSXApplicationPrivate"
+>GtkOSXApplicationPrivate</a>;
+                    <a
+href="gtk-mac-integration/GtkOSXApplication.html#GtkOSXApplicationMenuGroup"
+>GtkOSXApplicationMenuGroup</a>;
+                    <a
+href="gtk-mac-integration/GtkOSXApplication.html#GtkOSXApplication-struct"
+>GtkOSXApplication</a>;
+void                <a
+href="gtk-mac-integration/GtkOSXApplication.html#gtk-osxapplication-ready"
+>gtk_osxapplication_ready</a>            (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self);
+void                <a
+href="gtk-mac-integration/GtkOSXApplication.html#gtk-osxapplication-cleanup"
+>gtk_osxapplication_cleanup</a>          (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self);
+void                <a
+href="gtk-mac-integration/GtkOSXApplication.html#gtk-osxapplication-set-use-quartz-accelerators"
+>gtk_osxapplication_set_use_quartz_accelerators</a>
+                                                        (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self,
+                                                         gboolean use_quartz_accelerators);
+gboolean            <a
+href="gtk-mac-integration/GtkOSXApplication.html#gtk-osxapplication-use-quartz-accelerators"
+>gtk_osxapplication_use_quartz_accelerators</a>
+                                                        (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self);
+void                <a
+href="gtk-mac-integration/GtkOSXApplication.html#gtk-osxapplication-set-menu-bar"
+>gtk_osxapplication_set_menu_bar</a>     (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self,
+                                                         GtkMenuShell *menu_shell);
+void                <a
+href="gtk-mac-integration/GtkOSXApplication.html#gtk-osxapplication-sync-menubar"
+>gtk_osxapplication_sync_menubar</a>     (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self);
+void                <a
+href="gtk-mac-integration/GtkOSXApplication.html#gtk-osxapplication-insert-app-menu-item"
+>gtk_osxapplication_insert_app_menu_item</a>
+                                                        (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self,
+                                                         GtkWidget *menu_item,
+                                                         gint index);
+void                <a
+href="gtk-mac-integration/GtkOSXApplication.html#gtk-osxapplication-set-window-menu"
+>gtk_osxapplication_set_window_menu</a>  (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self,
+                                                         GtkMenuItem *menu_item);
+void                <a
+href="gtk-mac-integration/GtkOSXApplication.html#gtk-osxapplication-set-help-menu"
+>gtk_osxapplication_set_help_menu</a>    (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self,
+                                                         GtkMenuItem *menu_item);
+enum                <a
+href="gtk-mac-integration/GtkOSXApplication.html#GtkOSXApplicationAttentionType"
+>GtkOSXApplicationAttentionType</a>;
+#define             <a
+href="gtk-mac-integration/GtkOSXApplication.html#GTK-TYPE-OSX-APPLICATION-ATTENTION-TYPE--CAPS"
+>GTK_TYPE_OSX_APPLICATION_ATTENTION_TYPE</a>
+GType               <a
+href="gtk-mac-integration/GtkOSXApplication.html#gtk-type-osxapplication-attention-type-get-type"
+>gtk_type_osxapplication_attention_type_get_type</a>
+                                                        (void);
+void                <a
+href="gtk-mac-integration/GtkOSXApplication.html#gtk-osxapplication-set-dock-menu"
+>gtk_osxapplication_set_dock_menu</a>    (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self,
+                                                         GtkMenuShell *menu_shell);
+void                <a
+href="gtk-mac-integration/GtkOSXApplication.html#gtk-osxapplication-set-dock-icon-pixbuf"
+>gtk_osxapplication_set_dock_icon_pixbuf</a>
+                                                        (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self,
+                                                         GdkPixbuf *pixbuf);
+void                <a
+href="gtk-mac-integration/GtkOSXApplication.html#gtk-osxapplication-set-dock-icon-resource"
+>gtk_osxapplication_set_dock_icon_resource</a>
+                                                        (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self,
+                                                         const gchar *name,
+                                                         const gchar *type,
+                                                         const gchar *subdir);
+gint                <a
+href="gtk-mac-integration/GtkOSXApplication.html#gtk-osxapplication-attention-request"
+>gtk_osxapplication_attention_request</a>
+                                                        (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self,
+                                                         <a
+href="gtk-mac-integration/GtkOSXApplication.html#GtkOSXApplicationAttentionType"
+>GtkOSXApplicationAttentionType</a> type);
+void                <a
+href="gtk-mac-integration/GtkOSXApplication.html#gtk-osxapplication-cancel-attention-request"
+>gtk_osxapplication_cancel_attention_request</a>
+                                                        (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self,
+                                                         gint id);
+gchar *             <a
+href="gtk-mac-integration/GtkOSXApplication.html#quartz-application-get-bundle-path"
+>quartz_application_get_bundle_path</a>  (void);
+gchar *             <a
+href="gtk-mac-integration/GtkOSXApplication.html#quartz-application-get-resource-path"
+>quartz_application_get_resource_path</a>
+                                                        (void);
+gchar *             <a
+href="gtk-mac-integration/GtkOSXApplication.html#quartz-application-get-executable-path"
+>quartz_application_get_executable_path</a>
+                                                        (void);
+gchar *             <a
+href="gtk-mac-integration/GtkOSXApplication.html#quartz-application-get-bundle-id"
+>quartz_application_get_bundle_id</a>    (void);
+gchar *             <a
+href="gtk-mac-integration/GtkOSXApplication.html#quartz-application-get-bundle-info"
+>quartz_application_get_bundle_info</a>  (const gchar *key);
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="GtkOSXApplication.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----GtkOSXApplication
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="GtkOSXApplication.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a
+href="gtk-mac-integration/GtkOSXApplication.html#GtkOSXApplication-NSApplicationBlockTermination"
+>NSApplicationBlockTermination</a>"                  : No Recursion / Action
+  "<a
+href="gtk-mac-integration/GtkOSXApplication.html#GtkOSXApplication-NSApplicationDidBecomeActive"
+>NSApplicationDidBecomeActive</a>"                   : No Recursion / Action
+  "<a
+href="gtk-mac-integration/GtkOSXApplication.html#GtkOSXApplication-NSApplicationOpenFile"
+>NSApplicationOpenFile</a>"                          : No Recursion / Action
+  "<a
+href="gtk-mac-integration/GtkOSXApplication.html#GtkOSXApplication-NSApplicationWillResignActive"
+>NSApplicationWillResignActive</a>"                  : No Recursion / Action
+  "<a
+href="gtk-mac-integration/GtkOSXApplication.html#GtkOSXApplication-NSApplicationWillTerminate"
+>NSApplicationWillTerminate</a>"                     : No Recursion / Action
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="GtkOSXApplication.description"></a><h2>Description</h2>
+<p>
+Exposes to the Gtk+ program important functions of
+OSX's NSApplication class for use by Gtk+ applications running with
+the quartz Gdk backend and provides addtional functions for
+integrating a Gtk+ program into the OSX user environment.
+</p>
+<p>
+Using GtkOSXApplication is pretty simple.
+First, create an instance at startup:
+</p>
+<p>
+</p>
+<div class="informalexample"><pre class="programlisting">GtkOSXApplication *theApp = g_object_new(GTK_TYPE_OSX_APPLICATION, NULL);</pre></div>
+<p>
+</p>
+<p>
+Do this early in your program, shortly after you run
+</p>
+<div class="informalexample"><pre class="programlisting">gtk_init()</pre></div>
+<p>. Don't forget to guard it, and all other calls into
+the library, with </p>
+<div class="informalexample"><pre class="programlisting">#ifdef MAC_INTEGRATION</pre></div>
+<p>. You don't want your
+Linux users' builds failing because of this.  The application
+object is a singleton, so you can call g_object_new as often as you
+like. You'll always get the same pointer back. There's no need to
+pass it around as an argument. Do note that all of the
+GtkOSXApplication functions take theApp as an argument, even if
+they don't use it. This seems silly in C, and perhaps it is, but
+it's needed to make the Python binding logic recognize that they're
+class methods.
+</p>
+<p>
+Just having the application object created will get you some
+benefits, like having the Quit menu item in the dock menu work. But
+you'll obviously want more. So the next place to visit is your main
+window code. If you have a simple application, you might be
+constructing the menu by hand, but you're more likely to be using
+GtkBuilder. In either case, you need to get a pointer to the
+menubar. If you're building by hand, you've already got it lying
+around because you needed it to add the menus to. With GtkBuilder,
+you need to ask the GtkUIManager for a pointer. Once everything is
+more-or-less set up on the Gtk+ side, you need only hide the menu
+and call <code class="function">gtk_osxapplication_set_main_menu()</code>. Here's an example with
+GtkBuilder:
+</p>
+<p>
+</p>
+<div class="example">
+<a name="id470211"></a><p class="title"><b>Example 1. Setting the MenuBar</b></p>
+<div class="example-contents"><pre class="programlisting">
+  GtkUIManager *mgr = gtk_ui_manager_new();
+  GtkOSXApplication *theApp = g_object_new(GTK_TYPE_OSX_APPLICATION, NULL);
+  ...
+  mergeid = gtk_ui_manager_add_ui_from_file(mgr, "src/testui.xml", &amp;err);
+  ...
+  menubar = gtk_ui_manager_get_widget(mgr, "/menubar");
+  gtk_widget_hide (menubar);
+  gtk_osxapplication_set_menu_bar(theApp, GTK_MENU_SHELL(menubar));
+</pre></div>
+</div>
+<p><br class="example-break">
+</p>
+<p>
+There are a couple of wrinkles, though, if you use
+accelerators. First off, there are two event paths for
+accelerators: Quartz, where the keystroke is processed by OSX and
+the menu item action event is placed on the event queue by OSX, or
+Gtk, where the accelerator key event is passed through to Gtk to
+recognize. This is controlled by
+<a
+href="gtk-mac-integration/GtkOSXApplication.html#gtk-osxapplication-set-use-quartz-accelerators"
+><code class="function">gtk_osxapplication_set_use_quartz_accelerators()</code></a> (you can test the
+value with <a
+href="gtk-mac-integration/GtkOSXApplication.html#gtk-osxapplication-use-quartz-accelerators"
+><code class="function">gtk_osxapplication_use_quartz_accelerators()</code></a>), and the
+default is to use Quartz handling. This has two advantages:
+</p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>It works without any extra steps</p></li>
+<li><p>
+It changes stock accelerators (like Ctrl-O for open file) to
+the stock OSX keyEquivalent (Cmd-O in that case).
+</p></li>
+</ul></div>
+<p>
+If you need to use Gtk+ keyboard accelerator handling <span class="emphasis"><em>and</em></span>
+you're using GtkMenuItems instead of GtkActions, you'll need to
+connect a special handler as shown in the following example:
+</p>
+<div class="example">
+<a name="id470274"></a><p class="title"><b>Example 2. Enabling Accelerators on Hidden Menus</b></p>
+<div class="example-contents"><pre class="programlisting">
+static gboolean
+can_activate_cb(GtkWidget* widget, guint signal_id, gpointer data)
+{
+  return gtk_widget_is_sensitive(widget);
+}
+...
+  g_signal_connect(menubar, "can-activate-accel", 
+                   G_CALLBACK(can_activate_cb), NULL);
+</pre></div>
+</div>
+<p><br class="example-break">
+</p>
+<p>
+The next task to make your application appear more normal for Mac
+users is to move some menu items from their normal Gtk locations to
+the so-called "App" menu. That's the menu all the way at the left
+of the menubar that has the currently-running application's
+name. There are 3 menu items that normally go there:
+</p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>Help|About</p></li>
+<li><p>Edit|Preferences</p></li>
+<li><p>File|Quit</p></li>
+</ul></div>
+<p>
+File|Quit is a special case, because OSX handles it itself and
+automatically includes it, so the only thing you need do is hide it
+on the File menu so that it doesn't show up twice:
+</p>
+<div class="informalexample"><pre class="programlisting">gtk_widget_hide(GTK_WIDGET(file_quit_menu_item));</pre></div>
+<p>
+The other two must be moved in code, and there are two functions
+for doing that. The first one creates "goups", which is just an
+easy way to manage separators, and the second adds the actual menu
+items to the groups. Here's an example:
+</p>
+<div class="example">
+<a name="id470325"></a><p class="title"><b>Example 3. </b></p>
+<div class="example-contents"><pre class="programlisting">
+ GtkOSXApplicationMenuGroup *group;
+ GtkMenuItem *about_item, *preferences_item;
+ about_item = gtk_ui_manager_get_widget(mgr, "/menubar/Help/About");
+ preferences_item = gtk_ui_manager_get_widget(mgr, "/menubar/Edit/Preferences");
+
+ group = gtk_osxapplication_add_app_menu_group (theApp);
+ gtk_osxapplication_add_app_menu_item  (theApp, group,
+                                        GTK_MENU_ITEM (about_item));
+
+ group = gtk_osxapplication_add_app_menu_group (theApp);
+ gtk_osxapplication_add_app_menu_item  (theApp, group,
+                                        GTK_MENU_ITEM (preferences_item));
+</pre></div>
+</div>
+<p><br class="example-break">
+Once we have everything set up for as many windows as we're going
+to open before we call <code class="function">gtk_main_loop()</code>, we need to tell OSX that
+we're ready:
+</p>
+<div class="informalexample"><pre class="programlisting">gtk_osxapplication_ready(theApp);</pre></div>
+<p>
+</p>
+<p>
+If you add other windows later, you must do everything above for
+each one's menubar. Most of the time the internal notifictations
+will ensure that the GtkOSXApplication is able to keep everything
+in sync. However, if you at any time disconnect or block signals
+and change the menu (perhaps because of a context change within a
+window, as with changing pages in a GtkNotebook) you need to call
+</p>
+<div class="informalexample"><pre class="programlisting">gtk_osxapplication_sync_menubar(theApp)</pre></div>
+<p>
+</p>
+<p>
+* The dock is that bar of icons that normally lives at the bottom of
+the display on a Mac (though it can be moved to one of the other
+sides; this author likes his on the left, which is where it was
+originally on a NeXT). Each running application has a "dock tile",
+an icon on the dock. Users can, if they like, add application (or
+document) icons to the dock, and those can be used to launch the
+application. Apple allows limited customization of the dock tile,
+and GtkOSXApplication has an interface for adding to the dock's
+menu and for changing the icon that is displayed for the the
+application. GtkOSXApplication also provides an interface to
+AttentionRequest, which bounces the dock tile if the application
+doesn't have focus. You might want to do that at the end of a long
+task so that the user will know that it's finished if she's
+switched to another application while she waits for yours.
+They're all pretty simple, so you can just read the details below.
+</p>
+<p>
+* The last feature to which GtkOSXApplication provides an interface
+is the bundle. Normally in OSX, graphical applications are packaged
+along with their non-standard dependencies and their resources
+(graphical elements, translations, and such) in special directory
+structures called "bundles". To easily package your Gtk+
+application, have a look at gtk-mac-bundler, also available from
+the Gtk-OSX project.
+</p>
+<p>
+OSX provides a variety of functions pertaining to bundles, most of which are not likely to interest someone porting a Gtk+ application. GtkOSXApplication has wrapped a few that might be:
+</p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><code class="function">gtk_osxapplication_get_bundle_path()</code></p></li>
+<li><p><code class="function">gtk_osxapplication_get_resource_path()</code></p></li>
+<li><p><code class="function">gtk_osxapplication_get_executable_path()</code></p></li>
+<li><p><code class="function">gtk_osxapplication_get_bundle_id()</code></p></li>
+<li><p><code class="function">gtk_osxapplication_get_bundle_info()</code></p></li>
+</ul></div>
+<p>
+</p>
+<p>
+The first three just get a UTF8-encoded path. An interesting note
+is that they'll return the path to the executable or the folder
+it's in regardless of whether it's actually in a bundle. To find
+out if one is actually dealing with a bundle,
+<code class="function">gtk_osxapplication_get_bundle_id()</code> will return "" if it can't find
+the key <code class="literal">CFBundleIdentifier</code> from the bundle's Info.plist -- which it
+won't if the application isn't in a bundle or wasn't launched by
+opening the bundle. (In other words, even if you have your
+application installed in Foo.app, if you launch it from the command
+line as
+</p>
+<div class="informalexample"><pre class="programlisting">$ Foo.app/Contents/MacOS/Foo</pre></div>
+<p>
+the Info.plist won't have been opened and
+<code class="function">gtk_osxapplication_get_bundle_id()</code> will return "". Of course, it
+will also return "" if you didn't set <code class="literal">CFBundleIdentifier</code> in the
+Info.plist, so make sure that you do!
+</p>
+<p>
+The last function, <code class="function">gtk_osxapplication_get_bundle_info()</code>, will
+return the value associated with an arbitrary key from Info.plist
+as long as that value is a string. If it isn't, then the function
+returns a null string ("").
+</p>
+<p>
+Finally, notice the signals. These are emitted in response to the
+indicated OSX notifications. Except for
+<a
+href="gtk-mac-integration/GtkOSXApplication.html#GtkOSXApplication-NSApplicationBlockTermination"
+><span class="type">"NSApplicationBlockTermination"</span></a>, most programs
+won't need to do anything with
+them. <a
+href="gtk-mac-integration/GtkOSXApplication.html#GtkOSXApplication-NSApplicationBlockTermination"
+><span class="type">"NSApplicationBlockTermination"</span></a> is telling
+you that OSX is planning to shut down your program. If you have any
+cleanup to do (like saving open files), or if you want to ask the
+user if it's OK, you should connect to the signal and do your
+cleanup. Your handler can return <code class="literal">TRUE</code> to prevent the application
+from quitting.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="GtkOSXApplication.details"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="GtkOSXApplicationPrivate"></a><h3>GtkOSXApplicationPrivate</h3>
+<pre class="programlisting">typedef struct _GtkOSXApplicationPrivate GtkOSXApplicationPrivate;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GtkOSXApplicationMenuGroup"></a><h3>GtkOSXApplicationMenuGroup</h3>
+<pre class="programlisting">typedef struct {
+  GList *items;
+} GtkOSXApplicationMenuGroup;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GtkOSXApplication-struct"></a><h3>GtkOSXApplication</h3>
+<pre class="programlisting">typedef struct _GtkOSXApplication GtkOSXApplication;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gtk-osxapplication-ready"></a><h3>gtk_osxapplication_ready ()</h3>
+<pre class="programlisting">void                gtk_osxapplication_ready            (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self);</pre>
+<p>
+Inform Cocoa that application initialization is complete.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>self</code></em> :</span></td>
+<td> The GtkOSXApplication object
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gtk-osxapplication-cleanup"></a><h3>gtk_osxapplication_cleanup ()</h3>
+<pre class="programlisting">void                gtk_osxapplication_cleanup          (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self);</pre>
+<p>
+Destroy the GtkOSXApplication object. Not normally needed, as the
+object is expected to remain until the application quits, and this
+function is called by the notification object at that time.  Menu
+bars are released as the corresponding GtkMenuBars are destroyed.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>self</code></em> :</span></td>
+<td> The GtkApplication object
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gtk-osxapplication-set-use-quartz-accelerators"></a><h3>gtk_osxapplication_set_use_quartz_accelerators ()</h3>
+<pre class="programlisting">void                gtk_osxapplication_set_use_quartz_accelerators
+                                                        (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self,
+                                                         gboolean use_quartz_accelerators);</pre>
+<p>
+Set quartz accelerator handling; TRUE (default) uses quartz; FALSE
+uses Gtk+. Quartz accelerator handling is required for normal OSX
+accelerators (e.g., command-q to quit) to work.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em> :</span></td>
+<td> The GtkOSXApplication pointer.
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>use_quartz_accelerators</code></em> :</span></td>
+<td> Gboolean 
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gtk-osxapplication-use-quartz-accelerators"></a><h3>gtk_osxapplication_use_quartz_accelerators ()</h3>
+<pre class="programlisting">gboolean            gtk_osxapplication_use_quartz_accelerators
+                                                        (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self);</pre>
+<p>
+Are we using Quartz or Gtk+ accelerator handling?</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em> :</span></td>
+<td> The GtkOSXApplication pointer.
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></td>
+<td> a gboolean
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gtk-osxapplication-set-menu-bar"></a><h3>gtk_osxapplication_set_menu_bar ()</h3>
+<pre class="programlisting">void                gtk_osxapplication_set_menu_bar     (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self,
+                                                         GtkMenuShell *menu_shell);</pre>
+<p>
+Set a window's menubar as the application menu bar. Call this once
+for each window as you create them. It works best if the menubar is
+reasonably fully populated before you call it. Once set, it will
+stay syncronized through signals as long as you don't disconnect or
+block them.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em> :</span></td>
+<td> The GtkOSXApplication object
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>menu_shell</code></em> :</span></td>
+<td> The GtkMenuBar that you want to set.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gtk-osxapplication-sync-menubar"></a><h3>gtk_osxapplication_sync_menubar ()</h3>
+<pre class="programlisting">void                gtk_osxapplication_sync_menubar     (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self);</pre>
+<p>
+Syncronize the active window's GtkMenuBar with the OSX menu
+bar. You should only need this if you have programmatically changed
+the menus with signals blocked or disconnected.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>self</code></em> :</span></td>
+<td> The GtkOSXApplication object
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gtk-osxapplication-insert-app-menu-item"></a><h3>gtk_osxapplication_insert_app_menu_item ()</h3>
+<pre class="programlisting">void                gtk_osxapplication_insert_app_menu_item
+                                                        (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self,
+                                                         GtkWidget *menu_item,
+                                                         gint index);</pre>
+<p>
+Certain menu items (About, Check for updates, and Preferences in
+particular) are normally found in the so-called Application menu
+(the first one on the menubar, named after the application) in OSX
+applications. This function will create a menu entry for such a
+menu item, removing it from its original menu in the Gtk
+application.
+</p>
+<p>
+To group your menu items, insert GtkSeparatorMenuItem*s where you want them.
+</p>
+<p>
+Don't use it for Quit! A Quit menu item is created automatically
+along with the Application menu. Just hide your Gtk Quit menu item.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em> :</span></td>
+<td> The GtkOSXApplication object
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>menu_item</code></em> :</span></td>
+<td> The GtkMenuItem to add to the group.
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>index</code></em> :</span></td>
+<td> The place in the app menu that you want the item
+inserted. The first item is 0.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gtk-osxapplication-set-window-menu"></a><h3>gtk_osxapplication_set_window_menu ()</h3>
+<pre class="programlisting">void                gtk_osxapplication_set_window_menu  (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self,
+                                                         GtkMenuItem *menu_item);</pre>
+<p>
+Sets a designated menu item already on the menu bar as the Window
+menu. This is the menu which contains a list of open windows for
+the application; by default it also provides menu items to minimize
+and zoom the current window and to bring all windows to the
+front. Call this after <code class="function">gtk_osx_application_set_menu_bar()</code>. It
+operates on the currently active menubar. If <em class="parameter"><code>nenu_item</code></em> is NULL, it
+will create a new menu for you, which will not be gettext translatable.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em> :</span></td>
+<td> The application object
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>menu_item</code></em> :</span></td>
+<td> The menu item which will be set as the Window menu
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gtk-osxapplication-set-help-menu"></a><h3>gtk_osxapplication_set_help_menu ()</h3>
+<pre class="programlisting">void                gtk_osxapplication_set_help_menu    (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self,
+                                                         GtkMenuItem *menu_item);</pre>
+<p>
+Sets a designated menu item already on the menu bar as the Help
+menu. Call this after <code class="function">gtk_osx_application_set_menu_bar()</code>, but
+before <code class="function">gtk_osx_application_window_menu()</code>, especially if you're
+letting GtkOSXApplication create a Window menu for you (it helps
+position the Window menu correctly). It operates on the currently
+active menubar. If <em class="parameter"><code>nenu_item</code></em> is <code class="literal">NULL</code>, it will create a new menu
+for you, which will not be gettext translatable.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em> :</span></td>
+<td> The application object
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>menu_item</code></em> :</span></td>
+<td> The menu item which will be set as the Window menu
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GtkOSXApplicationAttentionType"></a><h3>enum GtkOSXApplicationAttentionType</h3>
+<pre class="programlisting">typedef enum {
+  CRITICAL_REQUEST = 0,
+  INFO_REQUEST = 10
+} GtkOSXApplicationAttentionType;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GTK-TYPE-OSX-APPLICATION-ATTENTION-TYPE--CAPS"></a><h3>GTK_TYPE_OSX_APPLICATION_ATTENTION_TYPE</h3>
+<pre class="programlisting">#define GTK_TYPE_OSX_APPLICATION_ATTENTION_TYPE	(gtk_type_osxapplication_attention_type_get_type())
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gtk-type-osxapplication-attention-type-get-type"></a><h3>gtk_type_osxapplication_attention_type_get_type ()</h3>
+<pre class="programlisting">GType               gtk_type_osxapplication_attention_type_get_type
+                                                        (void);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gtk-osxapplication-set-dock-menu"></a><h3>gtk_osxapplication_set_dock_menu ()</h3>
+<pre class="programlisting">void                gtk_osxapplication_set_dock_menu    (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self,
+                                                         GtkMenuShell *menu_shell);</pre>
+<p>
+Set a GtkMenu as the dock menu.  
+</p>
+<p>
+This menu does not have a "sync" function, so changes made while
+signals are disconnected will not update the menu which appears in
+the dock, and may produce strange results or crashes if a
+GtkMenuItem or GtkAction associated with a dock menu item is
+deallocated.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em> :</span></td>
+<td> The GtkOSXApplication object
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>menu_shell</code></em> :</span></td>
+<td> A GtkMenu (cast it with <code class="function">GTK_MENU_SHELL()</code> when you
+pass it in
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gtk-osxapplication-set-dock-icon-pixbuf"></a><h3>gtk_osxapplication_set_dock_icon_pixbuf ()</h3>
+<pre class="programlisting">void                gtk_osxapplication_set_dock_icon_pixbuf
+                                                        (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self,
+                                                         GdkPixbuf *pixbuf);</pre>
+<p>
+Set the dock icon from a GdkPixbuf</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em> :</span></td>
+<td> The GtkOSXApplication
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>pixbuf</code></em> :</span></td>
+<td> The pixbuf. Pass NULL to reset the icon to its default.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gtk-osxapplication-set-dock-icon-resource"></a><h3>gtk_osxapplication_set_dock_icon_resource ()</h3>
+<pre class="programlisting">void                gtk_osxapplication_set_dock_icon_resource
+                                                        (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self,
+                                                         const gchar *name,
+                                                         const gchar *type,
+                                                         const gchar *subdir);</pre>
+<p>
+Set the dock icon from an image file in the bundle/</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em> :</span></td>
+<td> The GtkOSXApplication
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>name</code></em> :</span></td>
+<td> The ame of the image file
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>type</code></em> :</span></td>
+<td> The extension (e.g., jpg) of the filename
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>subdir</code></em> :</span></td>
+<td> The subdirectory of $Bundle/Contents/Resources in which to
+look for the file.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gtk-osxapplication-attention-request"></a><h3>gtk_osxapplication_attention_request ()</h3>
+<pre class="programlisting">gint                gtk_osxapplication_attention_request
+                                                        (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self,
+                                                         <a
+href="gtk-mac-integration/GtkOSXApplication.html#GtkOSXApplicationAttentionType"
+>GtkOSXApplicationAttentionType</a> type);</pre>
+<p>
+Create an attention request.  If type is CRITICAL_REQUEST, the
+dock icon will bounce until cancelled the application receives
+focus; otherwise it will bounce for 1 second -- but the attention
+request will remain asserted until cancelled or the application
+receives focus. This function has no effect if the application has focus.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em> :</span></td>
+<td> The GtkOSXApplication pointer
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>type</code></em> :</span></td>
+<td> CRITICAL_REQUEST or INFO_REQUEST
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></td>
+<td> A the attention request ID. Pass this id to
+gtk_osxapplication_cancel_attention_request.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gtk-osxapplication-cancel-attention-request"></a><h3>gtk_osxapplication_cancel_attention_request ()</h3>
+<pre class="programlisting">void                gtk_osxapplication_cancel_attention_request
+                                                        (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *self,
+                                                         gint id);</pre>
+<p>
+Cancel an attention request created with
+gtk_osxapplication_attention_request.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>self</code></em> :</span></td>
+<td> The application
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>id</code></em> :</span></td>
+<td> The integer attention request id returned from
+gtk_osxapplication_attention_request.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="quartz-application-get-bundle-path"></a><h3>quartz_application_get_bundle_path ()</h3>
+<pre class="programlisting">gchar *             quartz_application_get_bundle_path  (void);</pre>
+<p>
+Return the root path of the bundle or the directory containing the
+ executable if it isn't actually a bundle.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></td>
+<td> path The bundle's absolute path or <code class="literal">NULL</code> on error. <code class="function">g_free()</code> it when done.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="quartz-application-get-resource-path"></a><h3>quartz_application_get_resource_path ()</h3>
+<pre class="programlisting">gchar *             quartz_application_get_resource_path
+                                                        (void);</pre>
+<p>
+Return the Resource path for the bundle or the directory containing the
+ executable if it isn't actually a bundle. Use <a
+href="gtk-mac-integration/GtkOSXApplication.html#quartz-application-get-bundle-id"
+><code class="function">quartz_application_get_bundle_id()</code></a> to check (it will return <code class="literal">NULL</code> if it's not a bundle).</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></td>
+<td> path The absolute resource path. or <code class="literal">NULL</code> on error. <code class="function">g_free()</code> it when done.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="quartz-application-get-executable-path"></a><h3>quartz_application_get_executable_path ()</h3>
+<pre class="programlisting">gchar *             quartz_application_get_executable_path
+                                                        (void);</pre>
+<p>
+Return the executable path, including file name</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></td>
+<td> The path to the primary executable, or <code class="literal">NULL</code> if it can't find one. <code class="function">g_free()</code> it when done
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="quartz-application-get-bundle-id"></a><h3>quartz_application_get_bundle_id ()</h3>
+<pre class="programlisting">gchar *             quartz_application_get_bundle_id    (void);</pre>
+<p>
+Return the value of the CFBundleIdentifier key from the bundle's Info.plist
+</p>
+<p>
+This will return NULL if it's not really a bundle, there's no
+Info.plist, or if Info.plist doesn't have a CFBundleIdentifier key
+(So if you need to detect being in a bundle, make sure that your
+bundle has that key!)</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></td>
+<td> The string value of CFBundleIdentifier, or <code class="literal">NULL</code> if there is none. <code class="function">g_free()</code> it when done.
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="quartz-application-get-bundle-info"></a><h3>quartz_application_get_bundle_info ()</h3>
+<pre class="programlisting">gchar *             quartz_application_get_bundle_info  (const gchar *key);</pre>
+<p>
+Queries the bundle's Info.plist with key. If the returned object is
+a string, returns that; otherwise returns <code class="literal">NULL</code>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>key</code></em> :</span></td>
+<td> The key, as a normal UTF8 string.
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></td>
+<td> A UTF8-encoded string. <code class="function">g_free()</code> it when done.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="GtkOSXApplication.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2" lang="en">
+<a name="GtkOSXApplication-NSApplicationBlockTermination"></a><h3>The <code class="literal">"NSApplicationBlockTermination"</code> signal</h3>
+<pre class="programlisting">gboolean            user_function                      (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *app,
+                                                        gpointer           user_data)      : No Recursion / Action</pre>
+<p>
+Emitted by the Application Delegate when the application reeeives
+an NSApplicationShouldTerminate notification. Perform any cleanup
+you need to do (e.g., saving files) before exiting. Returning FALSE
+will allow further handlers to run and if none return TRUE, the
+application to shut down. Returning TRUE will veto shutdown and
+stop emission, so later handlers will not run.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>app</code></em> :</span></td>
+<td> The application object
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em> :</span></td>
+<td> Data appended at connection
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em> :</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></td>
+<td> Boolean indicating that further emission and application
+termination should be blocked.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GtkOSXApplication-NSApplicationDidBecomeActive"></a><h3>The <code class="literal">"NSApplicationDidBecomeActive"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *app,
+                                                        gpointer           user_data)      : No Recursion / Action</pre>
+<p>
+Emitted by the Application Delegate when the application receives
+an NSApplicationDidBecomeActive notification. Connect a handler if
+there is anything you need to do when the application is activated.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>app</code></em> :</span></td>
+<td> The application object
+<span class="type">""</span> Data appended at connection
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em> :</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GtkOSXApplication-NSApplicationOpenFile"></a><h3>The <code class="literal">"NSApplicationOpenFile"</code> signal</h3>
+<pre class="programlisting">gboolean            user_function                      (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *app,
+                                                        gchar             *path,
+                                                        gpointer           user_data)      : No Recursion / Action</pre>
+<p>
+Emitted when a OpenFile, OpenFiles, or OpenEmptyFile event is
+received from the operating system. This signal does not implement
+drops, but it does implement "open with" events from Finder. An
+OpenEmptyFile is received at launch in Python applications.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>app</code></em> :</span></td>
+<td> The application object
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>path</code></em> :</span></td>
+<td> A UTF8-encoded file path to open.
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em> :</span></td>
+<td> Data attached at connection
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em> :</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></td>
+<td> Boolean indicating success at opening the file.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GtkOSXApplication-NSApplicationWillResignActive"></a><h3>The <code class="literal">"NSApplicationWillResignActive"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *app,
+                                                        gpointer           user_data)      : No Recursion / Action</pre>
+<p>
+This signal is emitted by the Application Delegate when the
+application receives an NSApplicationWillResignActive
+notification. Connect a handler to it if there's anything your
+application needs to do to prepare for inactivity.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>app</code></em> :</span></td>
+<td> The application object
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em> :</span></td>
+<td> Data appended at connection
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em> :</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GtkOSXApplication-NSApplicationWillTerminate"></a><h3>The <code class="literal">"NSApplicationWillTerminate"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a
+href="gtk-mac-integration/GtkOSXApplication.html"
+>GtkOSXApplication</a> *app,
+                                                        gpointer           user_data)      : No Recursion / Action</pre>
+<p>
+Emitted by the Application Delegate when the application reeeives
+an NSApplicationSWillTerminate notification. Connect your final
+shutdown routine (the one that calls <code class="function">gtk_main_quit()</code> here.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>app</code></em> :</span></td>
+<td> The application object
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em> :</span></td>
+<td> Data appended at connection
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em> :</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

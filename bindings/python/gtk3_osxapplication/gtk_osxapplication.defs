@@ -1,0 +1,180 @@
+;; -*- scheme -*-
+; object definitions ...
+(define-object OSXApplication
+  (in-module "Gtk")
+  (parent "GObject")
+  (c-name "GtkOSXApplication")
+  (gtype-id "GTK_TYPE_OSX_APPLICATION")
+)
+
+;; Enumerations and flags ...
+
+(define-enum OSXApplicationAttentionType
+  (in-module "Gtk")
+  (c-name "GtkOSXApplicationAttentionType")
+  (gtype-id "GTK_TYPE_OSX_APPLICATION_ATTENTION_TYPE")
+  (values
+    '("critical-request" "CRITICAL_REQUEST")
+    '("info-request" "INFO_REQUEST")
+  )
+)
+
+
+;; From gtkosxapplication.h
+
+(define-function gtk_osxapplication_get_type
+  (c-name "gtk_osxapplication_get_type")
+  (return-type "GType")
+)
+
+(define-method ready
+  (of-object "GtkOSXApplication")
+  (c-name "gtk_osxapplication_ready")
+  (return-type "none")
+)
+
+(define-method cleanup
+  (of-object "GtkOSXApplication")
+  (c-name "gtk_osxapplication_cleanup")
+  (return-type "none")
+)
+
+(define-method set_use_quartz_accelerators
+  (of-object "GtkOSXApplication")
+  (c-name "gtk_osxapplication_set_use_quartz_accelerators")
+  (return-type "none")
+  (parameters
+    '("gboolean" "use_quartz_accelerators")
+  )
+)
+
+(define-method use_quartz_accelerators
+  (of-object "GtkOSXApplication")
+  (c-name "gtk_osxapplication_use_quartz_accelerators")
+  (return-type "gboolean")
+)
+
+(define-method set_menu_bar
+  (of-object "GtkOSXApplication")
+  (c-name "gtk_osxapplication_set_menu_bar")
+  (return-type "none")
+  (parameters
+    '("GtkMenuShell*" "menu_shell")
+  )
+)
+
+(define-method sync_menubar
+  (of-object "GtkOSXApplication")
+  (c-name "gtk_osxapplication_sync_menubar")
+  (return-type "none")
+)
+
+(define-method insert_app_menu_item
+  (of-object "GtkOSXApplication")
+  (c-name "gtk_osxapplication_insert_app_menu_item")
+  (return-type "none")
+  (parameters
+    '("GtkWidget*" "menu_item")
+    '("gint" "index")
+  )
+)
+
+(define-method set_window_menu
+  (of-object "GtkOSXApplication")
+  (c-name "gtk_osxapplication_set_window_menu")
+  (return-type "none")
+  (parameters
+    '("GtkMenuItem*" "menu_item")
+  )
+)
+
+(define-method set_help_menu
+  (of-object "GtkOSXApplication")
+  (c-name "gtk_osxapplication_set_help_menu")
+  (return-type "none")
+  (parameters
+    '("GtkMenuItem*" "menu_item")
+  )
+)
+
+(define-function gtk_type_osxapplication_attention_type_get_type
+  (c-name "gtk_type_osxapplication_attention_type_get_type")
+  (return-type "GType")
+)
+
+(define-method set_dock_menu
+  (of-object "GtkOSXApplication")
+  (c-name "gtk_osxapplication_set_dock_menu")
+  (return-type "none")
+  (parameters
+    '("GtkMenuShell*" "menu_shell")
+  )
+)
+
+(define-method set_dock_icon_pixbuf
+  (of-object "GtkOSXApplication")
+  (c-name "gtk_osxapplication_set_dock_icon_pixbuf")
+  (return-type "none")
+  (parameters
+    '("GdkPixbuf*" "pixbuf")
+  )
+)
+
+(define-method set_dock_icon_resource
+  (of-object "GtkOSXApplication")
+  (c-name "gtk_osxapplication_set_dock_icon_resource")
+  (return-type "none")
+  (parameters
+    '("const-gchar*" "name")
+    '("const-gchar*" "type")
+    '("const-gchar*" "subdir")
+  )
+)
+
+(define-method attention_request
+  (of-object "GtkOSXApplication")
+  (c-name "gtk_osxapplication_attention_request")
+  (return-type "gint")
+  (parameters
+    '("GtkOSXApplicationAttentionType" "type")
+  )
+)
+
+(define-method cancel_attention_request
+  (of-object "GtkOSXApplication")
+  (c-name "gtk_osxapplication_cancel_attention_request")
+  (return-type "none")
+  (parameters
+    '("gint" "id")
+  )
+)
+
+(define-function quartz_application_get_bundle_path
+  (c-name "quartz_application_get_bundle_path")
+  (return-type "gchar*")
+)
+
+(define-function quartz_application_get_resource_path
+  (c-name "quartz_application_get_resource_path")
+  (return-type "gchar*")
+)
+
+(define-function quartz_application_get_executable_path
+  (c-name "quartz_application_get_executable_path")
+  (return-type "gchar*")
+)
+
+(define-function quartz_application_get_bundle_id
+  (c-name "quartz_application_get_bundle_id")
+  (return-type "gchar*")
+)
+
+(define-function quartz_application_get_bundle_info
+  (c-name "quartz_application_get_bundle_info")
+  (return-type "gchar*")
+  (parameters
+    '("const-gchar*" "key")
+  )
+)
+
+

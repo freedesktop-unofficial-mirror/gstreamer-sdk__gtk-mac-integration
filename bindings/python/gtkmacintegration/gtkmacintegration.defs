@@ -1,0 +1,247 @@
+;; -*- scheme -*-
+; object definitions ...
+(define-object MacBundle
+  (in-module "Gtk")
+  (parent "GObject")
+  (c-name "GtkMacBundle")
+  (gtype-id "GTK_TYPE_MAC_BUNDLE")
+)
+
+(define-object MacDock
+  (in-module "Gtk")
+  (parent "GObject")
+  (c-name "GtkMacDock")
+  (gtype-id "GTK_TYPE_MAC_DOCK")
+)
+
+;; Enumerations and flags ...
+
+(define-enum MacAttentionType
+  (in-module "Gtk")
+  (c-name "GtkMacAttentionType")
+  (gtype-id "GTK_TYPE_MAC_ATTENTION_TYPE")
+  (values
+    '("critical" "GTK_MAC_ATTENTION_CRITICAL")
+    '("info" "GTK_MAC_ATTENTION_INFO")
+  )
+)
+
+
+;; From gtk-mac-menu.h
+
+(define-function gtk_mac_menu_set_menu_bar
+  (c-name "gtk_mac_menu_set_menu_bar")
+  (return-type "none")
+  (parameters
+    '("GtkMenuShell*" "menu_shell")
+  )
+)
+
+(define-function gtk_mac_menu_set_quit_menu_item
+  (c-name "gtk_mac_menu_set_quit_menu_item")
+  (return-type "none")
+  (parameters
+    '("GtkMenuItem*" "menu_item")
+  )
+)
+
+(define-function gtk_mac_menu_add_app_menu_group
+  (c-name "gtk_mac_menu_add_app_menu_group")
+  (return-type "GtkMacMenuGroup*")
+)
+
+(define-function gtk_mac_menu_add_app_menu_item
+  (c-name "gtk_mac_menu_add_app_menu_item")
+  (return-type "none")
+  (parameters
+    '("GtkMacMenuGroup*" "group")
+    '("GtkMenuItem*" "menu_item")
+    '("const-gchar*" "label")
+  )
+)
+
+(define-function gtk_mac_menu_sync
+  (c-name "gtk_mac_menu_sync")
+  (return-type "none")
+  (parameters
+    '("GtkMenuShell*" "menu_shell")
+  )
+)
+
+(define-function gtk_mac_menu_handle_menu_event
+  (c-name "gtk_mac_menu_handle_menu_event")
+  (return-type "gboolean")
+  (parameters
+    '("GdkEventKey*" "event")
+  )
+)
+
+(define-function gtk_mac_menu_set_global_key_handler_enabled
+  (c-name "gtk_mac_menu_set_global_key_handler_enabled")
+  (return-type "none")
+  (parameters
+    '("gboolean" "enabled")
+  )
+)
+
+(define-function gtk_mac_menu_connect_window_key_handler
+  (c-name "gtk_mac_menu_connect_window_key_handler")
+  (return-type "none")
+  (parameters
+    '("GtkWindow*" "window")
+  )
+)
+
+
+
+;; From gtk-mac-dock.h
+
+(define-function gtk_mac_dock_get_type
+  (c-name "gtk_mac_dock_get_type")
+  (return-type "GType")
+)
+
+(define-function gtk_mac_dock_new
+  (c-name "gtk_mac_dock_new")
+  (is-constructor-of "GtkMacDock")
+  (return-type "GtkMacDock*")
+)
+
+(define-function gtk_mac_dock_get_default
+  (c-name "gtk_mac_dock_get_default")
+  (return-type "GtkMacDock*")
+)
+
+(define-method set_icon_from_pixbuf
+  (of-object "GtkMacDock")
+  (c-name "gtk_mac_dock_set_icon_from_pixbuf")
+  (return-type "none")
+  (parameters
+    '("GdkPixbuf*" "pixbuf")
+  )
+)
+
+(define-method set_icon_from_resource
+  (of-object "GtkMacDock")
+  (c-name "gtk_mac_dock_set_icon_from_resource")
+  (return-type "none")
+  (parameters
+    '("GtkMacBundle*" "bundle")
+    '("const-gchar*" "name")
+    '("const-gchar*" "type")
+    '("const-gchar*" "subdir")
+  )
+)
+
+(define-method set_overlay_from_pixbuf
+  (of-object "GtkMacDock")
+  (c-name "gtk_mac_dock_set_overlay_from_pixbuf")
+  (return-type "none")
+  (parameters
+    '("GdkPixbuf*" "pixbuf")
+  )
+)
+
+(define-method set_overlay_from_resource
+  (of-object "GtkMacDock")
+  (c-name "gtk_mac_dock_set_overlay_from_resource")
+  (return-type "none")
+  (parameters
+    '("GtkMacBundle*" "bundle")
+    '("const-gchar*" "name")
+    '("const-gchar*" "type")
+    '("const-gchar*" "subdir")
+  )
+)
+
+(define-method attention_request
+  (of-object "GtkMacDock")
+  (c-name "gtk_mac_dock_attention_request")
+  (return-type "GtkMacAttentionRequest*")
+  (parameters
+    '("GtkMacAttentionType" "type")
+  )
+)
+
+(define-method attention_cancel
+  (of-object "GtkMacDock")
+  (c-name "gtk_mac_dock_attention_cancel")
+  (return-type "none")
+  (parameters
+    '("GtkMacAttentionRequest*" "request")
+  )
+)
+
+(define-function gtk_mac_attention_type_get_type
+  (c-name "gtk_mac_attention_type_get_type")
+  (return-type "GType")
+)
+
+
+
+;; From gtk-mac-bundle.h
+
+(define-function gtk_mac_bundle_get_type
+  (c-name "gtk_mac_bundle_get_type")
+  (return-type "GType")
+)
+
+(define-function gtk_mac_bundle_new
+  (c-name "gtk_mac_bundle_new")
+  (is-constructor-of "GtkMacBundle")
+  (return-type "GtkMacBundle*")
+)
+
+(define-function gtk_mac_bundle_get_default
+  (c-name "gtk_mac_bundle_get_default")
+  (return-type "GtkMacBundle*")
+)
+
+(define-method setup_environment
+  (of-object "GtkMacBundle")
+  (c-name "gtk_mac_bundle_setup_environment")
+  (return-type "none")
+)
+
+(define-method get_id
+  (of-object "GtkMacBundle")
+  (c-name "gtk_mac_bundle_get_id")
+  (return-type "const-gchar*")
+)
+
+(define-method get_path
+  (of-object "GtkMacBundle")
+  (c-name "gtk_mac_bundle_get_path")
+  (return-type "const-gchar*")
+)
+
+(define-method get_is_app_bundle
+  (of-object "GtkMacBundle")
+  (c-name "gtk_mac_bundle_get_is_app_bundle")
+  (return-type "gboolean")
+)
+
+(define-method get_localedir
+  (of-object "GtkMacBundle")
+  (c-name "gtk_mac_bundle_get_localedir")
+  (return-type "const-gchar*")
+)
+
+(define-method get_datadir
+  (of-object "GtkMacBundle")
+  (c-name "gtk_mac_bundle_get_datadir")
+  (return-type "const-gchar*")
+)
+
+(define-method get_resource_path
+  (of-object "GtkMacBundle")
+  (c-name "gtk_mac_bundle_get_resource_path")
+  (return-type "gchar*")
+  (parameters
+    '("const-gchar*" "name")
+    '("const-gchar*" "type")
+    '("const-gchar*" "subdir")
+  )
+)
+
+

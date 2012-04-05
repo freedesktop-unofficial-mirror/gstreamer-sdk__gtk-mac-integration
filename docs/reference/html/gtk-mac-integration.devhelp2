@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="Gtk-OSX Integration Reference Manual" link="index.html" author="" name="gtk-mac-integration" version="2" language="c">
+  <chapters>
+    <sub name="GtkOSXApplication Reference" link="ch01.html">
+      <sub name="GtkOSXApplication" link="GtkOSXApplication.html"/>
+    </sub>
+    <sub name="Object Hierarchy" link="object-tree.html"/>
+    <sub name="API Index" link="api-index-full.html"/>
+  </chapters>
+  <functions>
+    <keyword type="struct" name="GtkOSXApplicationPrivate" link="GtkOSXApplication.html#GtkOSXApplicationPrivate"/>
+    <keyword type="struct" name="GtkOSXApplicationMenuGroup" link="GtkOSXApplication.html#GtkOSXApplicationMenuGroup"/>
+    <keyword type="struct" name="GtkOSXApplication" link="GtkOSXApplication.html#GtkOSXApplication-struct"/>
+    <keyword type="function" name="gtk_osxapplication_ready ()" link="GtkOSXApplication.html#gtk-osxapplication-ready"/>
+    <keyword type="function" name="gtk_osxapplication_cleanup ()" link="GtkOSXApplication.html#gtk-osxapplication-cleanup"/>
+    <keyword type="function" name="gtk_osxapplication_set_use_quartz_accelerators ()" link="GtkOSXApplication.html#gtk-osxapplication-set-use-quartz-accelerators"/>
+    <keyword type="function" name="gtk_osxapplication_use_quartz_accelerators ()" link="GtkOSXApplication.html#gtk-osxapplication-use-quartz-accelerators"/>
+    <keyword type="function" name="gtk_osxapplication_set_menu_bar ()" link="GtkOSXApplication.html#gtk-osxapplication-set-menu-bar"/>
+    <keyword type="function" name="gtk_osxapplication_sync_menubar ()" link="GtkOSXApplication.html#gtk-osxapplication-sync-menubar"/>
+    <keyword type="function" name="gtk_osxapplication_insert_app_menu_item ()" link="GtkOSXApplication.html#gtk-osxapplication-insert-app-menu-item"/>
+    <keyword type="function" name="gtk_osxapplication_set_window_menu ()" link="GtkOSXApplication.html#gtk-osxapplication-set-window-menu"/>
+    <keyword type="function" name="gtk_osxapplication_set_help_menu ()" link="GtkOSXApplication.html#gtk-osxapplication-set-help-menu"/>
+    <keyword type="enum" name="enum GtkOSXApplicationAttentionType" link="GtkOSXApplication.html#GtkOSXApplicationAttentionType"/>
+    <keyword type="macro" name="GTK_TYPE_OSX_APPLICATION_ATTENTION_TYPE" link="GtkOSXApplication.html#GTK-TYPE-OSX-APPLICATION-ATTENTION-TYPE--CAPS"/>
+    <keyword type="function" name="gtk_type_osxapplication_attention_type_get_type ()" link="GtkOSXApplication.html#gtk-type-osxapplication-attention-type-get-type"/>
+    <keyword type="function" name="gtk_osxapplication_set_dock_menu ()" link="GtkOSXApplication.html#gtk-osxapplication-set-dock-menu"/>
+    <keyword type="function" name="gtk_osxapplication_set_dock_icon_pixbuf ()" link="GtkOSXApplication.html#gtk-osxapplication-set-dock-icon-pixbuf"/>
+    <keyword type="function" name="gtk_osxapplication_set_dock_icon_resource ()" link="GtkOSXApplication.html#gtk-osxapplication-set-dock-icon-resource"/>
+    <keyword type="function" name="gtk_osxapplication_attention_request ()" link="GtkOSXApplication.html#gtk-osxapplication-attention-request"/>
+    <keyword type="function" name="gtk_osxapplication_cancel_attention_request ()" link="GtkOSXApplication.html#gtk-osxapplication-cancel-attention-request"/>
+    <keyword type="function" name="quartz_application_get_bundle_path ()" link="GtkOSXApplication.html#quartz-application-get-bundle-path"/>
+    <keyword type="function" name="quartz_application_get_resource_path ()" link="GtkOSXApplication.html#quartz-application-get-resource-path"/>
+    <keyword type="function" name="quartz_application_get_executable_path ()" link="GtkOSXApplication.html#quartz-application-get-executable-path"/>
+    <keyword type="function" name="quartz_application_get_bundle_id ()" link="GtkOSXApplication.html#quartz-application-get-bundle-id"/>
+    <keyword type="function" name="quartz_application_get_bundle_info ()" link="GtkOSXApplication.html#quartz-application-get-bundle-info"/>
+    <keyword type="signal" name="The &quot;NSApplicationBlockTermination&quot; signal" link="GtkOSXApplication.html#GtkOSXApplication-NSApplicationBlockTermination"/>
+    <keyword type="signal" name="The &quot;NSApplicationDidBecomeActive&quot; signal" link="GtkOSXApplication.html#GtkOSXApplication-NSApplicationDidBecomeActive"/>
+    <keyword type="signal" name="The &quot;NSApplicationOpenFile&quot; signal" link="GtkOSXApplication.html#GtkOSXApplication-NSApplicationOpenFile"/>
+    <keyword type="signal" name="The &quot;NSApplicationWillResignActive&quot; signal" link="GtkOSXApplication.html#GtkOSXApplication-NSApplicationWillResignActive"/>
+    <keyword type="signal" name="The &quot;NSApplicationWillTerminate&quot; signal" link="GtkOSXApplication.html#GtkOSXApplication-NSApplicationWillTerminate"/>
+  </functions>
+</book>

@@ -1,0 +1,267 @@
+<!-- ##### SECTION Title ##### -->
+GtkOSXApplication
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### STRUCT GtkOSXApplicationPrivate ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### STRUCT GtkOSXApplicationMenuGroup ##### -->
+<para>
+
+</para>
+
+@items: 
+
+<!-- ##### STRUCT GtkOSXApplication ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL GtkOSXApplication::NSApplicationBlockTermination ##### -->
+<para>
+
+</para>
+
+@osxapplication: the object which received the signal.
+@Returns: 
+
+<!-- ##### SIGNAL GtkOSXApplication::NSApplicationDidBecomeActive ##### -->
+<para>
+
+</para>
+
+@osxapplication: the object which received the signal.
+
+<!-- ##### SIGNAL GtkOSXApplication::NSApplicationOpenFile ##### -->
+<para>
+
+</para>
+
+@osxapplication: the object which received the signal.
+@arg1: 
+@Returns: 
+
+<!-- ##### SIGNAL GtkOSXApplication::NSApplicationWillResignActive ##### -->
+<para>
+
+</para>
+
+@osxapplication: the object which received the signal.
+
+<!-- ##### SIGNAL GtkOSXApplication::NSApplicationWillTerminate ##### -->
+<para>
+
+</para>
+
+@osxapplication: the object which received the signal.
+
+<!-- ##### FUNCTION gtk_osxapplication_ready ##### -->
+<para>
+
+</para>
+
+@self: 
+
+
+<!-- ##### FUNCTION gtk_osxapplication_cleanup ##### -->
+<para>
+
+</para>
+
+@self: 
+
+
+<!-- ##### FUNCTION gtk_osxapplication_set_use_quartz_accelerators ##### -->
+<para>
+
+</para>
+
+@self: 
+@use_quartz_accelerators: 
+
+
+<!-- ##### FUNCTION gtk_osxapplication_use_quartz_accelerators ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_osxapplication_set_menu_bar ##### -->
+<para>
+
+</para>
+
+@self: 
+@menu_shell: 
+
+
+<!-- ##### FUNCTION gtk_osxapplication_sync_menubar ##### -->
+<para>
+
+</para>
+
+@self: 
+
+
+<!-- ##### FUNCTION gtk_osxapplication_insert_app_menu_item ##### -->
+<para>
+
+</para>
+
+@self: 
+@menu_item: 
+@index: 
+
+
+<!-- ##### FUNCTION gtk_osxapplication_set_window_menu ##### -->
+<para>
+
+</para>
+
+@self: 
+@menu_item: 
+
+
+<!-- ##### FUNCTION gtk_osxapplication_set_help_menu ##### -->
+<para>
+
+</para>
+
+@self: 
+@menu_item: 
+
+
+<!-- ##### ENUM GtkOSXApplicationAttentionType ##### -->
+<para>
+
+</para>
+
+@CRITICAL_REQUEST: 
+@INFO_REQUEST: 
+
+<!-- ##### MACRO GTK_TYPE_OSX_APPLICATION_ATTENTION_TYPE ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### FUNCTION gtk_type_osxapplication_attention_type_get_type ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_osxapplication_set_dock_menu ##### -->
+<para>
+
+</para>
+
+@self: 
+@menu_shell: 
+
+
+<!-- ##### FUNCTION gtk_osxapplication_set_dock_icon_pixbuf ##### -->
+<para>
+
+</para>
+
+@self: 
+@pixbuf: 
+
+
+<!-- ##### FUNCTION gtk_osxapplication_set_dock_icon_resource ##### -->
+<para>
+
+</para>
+
+@self: 
+@name: 
+@type: 
+@subdir: 
+
+
+<!-- ##### FUNCTION gtk_osxapplication_attention_request ##### -->
+<para>
+
+</para>
+
+@self: 
+@type: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gtk_osxapplication_cancel_attention_request ##### -->
+<para>
+
+</para>
+
+@self: 
+@id: 
+
+
+<!-- ##### FUNCTION quartz_application_get_bundle_path ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION quartz_application_get_resource_path ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION quartz_application_get_executable_path ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION quartz_application_get_bundle_id ##### -->
+<para>
+
+</para>
+
+@Returns: 
+
+
+<!-- ##### FUNCTION quartz_application_get_bundle_info ##### -->
+<para>
+
+</para>
+
+@key: 
+@Returns: 
+
+

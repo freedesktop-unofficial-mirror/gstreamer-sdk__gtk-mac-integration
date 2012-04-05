@@ -1,0 +1,2 @@
+gtk_osxapplication_get_type
+gtk_type_osxapplication_attention_type_get_type

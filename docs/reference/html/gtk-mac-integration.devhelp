@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="Gtk-OSX Integration Reference Manual" link="index.html" author="" name="gtk-mac-integration">
+  <chapters>
+    <sub name="GtkOSXApplication Reference" link="ch01.html">
+      <sub name="GtkOSXApplication" link="GtkOSXApplication.html"/>
+    </sub>
+    <sub name="Object Hierarchy" link="object-tree.html"/>
+    <sub name="API Index" link="api-index-full.html"/>
+  </chapters>
+  <functions>
+    <function name="GtkOSXApplicationPrivate" link="GtkOSXApplication.html#GtkOSXApplicationPrivate"/>
+    <function name="GtkOSXApplicationMenuGroup" link="GtkOSXApplication.html#GtkOSXApplicationMenuGroup"/>
+    <function name="GtkOSXApplication" link="GtkOSXApplication.html#GtkOSXApplication-struct"/>
+    <function name="gtk_osxapplication_ready ()" link="GtkOSXApplication.html#gtk-osxapplication-ready"/>
+    <function name="gtk_osxapplication_cleanup ()" link="GtkOSXApplication.html#gtk-osxapplication-cleanup"/>
+    <function name="gtk_osxapplication_set_use_quartz_accelerators ()" link="GtkOSXApplication.html#gtk-osxapplication-set-use-quartz-accelerators"/>
+    <function name="gtk_osxapplication_use_quartz_accelerators ()" link="GtkOSXApplication.html#gtk-osxapplication-use-quartz-accelerators"/>
+    <function name="gtk_osxapplication_set_menu_bar ()" link="GtkOSXApplication.html#gtk-osxapplication-set-menu-bar"/>
+    <function name="gtk_osxapplication_sync_menubar ()" link="GtkOSXApplication.html#gtk-osxapplication-sync-menubar"/>
+    <function name="gtk_osxapplication_insert_app_menu_item ()" link="GtkOSXApplication.html#gtk-osxapplication-insert-app-menu-item"/>
+    <function name="gtk_osxapplication_set_window_menu ()" link="GtkOSXApplication.html#gtk-osxapplication-set-window-menu"/>
+    <function name="gtk_osxapplication_set_help_menu ()" link="GtkOSXApplication.html#gtk-osxapplication-set-help-menu"/>
+    <function name="enum GtkOSXApplicationAttentionType" link="GtkOSXApplication.html#GtkOSXApplicationAttentionType"/>
+    <function name="GTK_TYPE_OSX_APPLICATION_ATTENTION_TYPE" link="GtkOSXApplication.html#GTK-TYPE-OSX-APPLICATION-ATTENTION-TYPE--CAPS"/>
+    <function name="gtk_type_osxapplication_attention_type_get_type ()" link="GtkOSXApplication.html#gtk-type-osxapplication-attention-type-get-type"/>
+    <function name="gtk_osxapplication_set_dock_menu ()" link="GtkOSXApplication.html#gtk-osxapplication-set-dock-menu"/>
+    <function name="gtk_osxapplication_set_dock_icon_pixbuf ()" link="GtkOSXApplication.html#gtk-osxapplication-set-dock-icon-pixbuf"/>
+    <function name="gtk_osxapplication_set_dock_icon_resource ()" link="GtkOSXApplication.html#gtk-osxapplication-set-dock-icon-resource"/>
+    <function name="gtk_osxapplication_attention_request ()" link="GtkOSXApplication.html#gtk-osxapplication-attention-request"/>
+    <function name="gtk_osxapplication_cancel_attention_request ()" link="GtkOSXApplication.html#gtk-osxapplication-cancel-attention-request"/>
+    <function name="quartz_application_get_bundle_path ()" link="GtkOSXApplication.html#quartz-application-get-bundle-path"/>
+    <function name="quartz_application_get_resource_path ()" link="GtkOSXApplication.html#quartz-application-get-resource-path"/>
+    <function name="quartz_application_get_executable_path ()" link="GtkOSXApplication.html#quartz-application-get-executable-path"/>
+    <function name="quartz_application_get_bundle_id ()" link="GtkOSXApplication.html#quartz-application-get-bundle-id"/>
+    <function name="quartz_application_get_bundle_info ()" link="GtkOSXApplication.html#quartz-application-get-bundle-info"/>
+    <function name="The &quot;NSApplicationBlockTermination&quot; signal" link="GtkOSXApplication.html#GtkOSXApplication-NSApplicationBlockTermination"/>
+    <function name="The &quot;NSApplicationDidBecomeActive&quot; signal" link="GtkOSXApplication.html#GtkOSXApplication-NSApplicationDidBecomeActive"/>
+    <function name="The &quot;NSApplicationOpenFile&quot; signal" link="GtkOSXApplication.html#GtkOSXApplication-NSApplicationOpenFile"/>
+    <function name="The &quot;NSApplicationWillResignActive&quot; signal" link="GtkOSXApplication.html#GtkOSXApplication-NSApplicationWillResignActive"/>
+    <function name="The &quot;NSApplicationWillTerminate&quot; signal" link="GtkOSXApplication.html#GtkOSXApplication-NSApplicationWillTerminate"/>
+  </functions>
+</book>
