@@ -706,7 +706,6 @@ main (int argc, char **argv)
 #ifdef GTKOSXAPPLICATION
   GtkOSXApplication *theApp;
 #endif //GTKOSXAPPLICATION
-    g_thread_init(NULL);
     gdk_threads_init();
   gtk_init (&argc, &argv);
 #ifdef GTKMACINTEGRATION
